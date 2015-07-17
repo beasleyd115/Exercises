@@ -1,0 +1,7 @@
+#!/usr/bin/ env perl
+
+print "Give me a number.";
+$number_one = <STDIN>;
+print "Give me another number.";
+$number_two = <STDIN>;
+print "Your 2 numbers multiplied together equal " .  $number_one * $number_two;

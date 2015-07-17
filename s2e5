@@ -1,0 +1,8 @@
+#!/usr/bin/evn perl
+
+print "Give me a word. ";
+$word = <STDIN>;
+print "Now give me a number. ";
+$number = <STDIN>;
+$export = $word x $number;
+print $export;
