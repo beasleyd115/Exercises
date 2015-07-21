@@ -1,0 +1,5 @@
+#!/usr/bin/env perl
+print "Enter words and I'll sort them for you\n";
+chomp(@words = <STDIN>);
+@words = sort @words;
+	print "@words \n";
