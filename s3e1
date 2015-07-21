@@ -1,0 +1,5 @@
+#!/usr/bin/env perl
+print "Please give me 3 strings then press control + D";
+@ray = <STDIN>;
+@ray = reverse @ray;
+print @ray;
