@@ -1,0 +1,11 @@
+#!/usr/bin/evn perl
+@names = qw! Don Makayla Angelo Roland Corey Austin Bailey Ryan Jeremy !;
+print "Please select 4 numbers";
+$w = <STDIN>;
+$x = <STDIN>;
+$y = <STDIN>;
+$z = <STDIN>;
+print @names[$w-1] . "\n";
+print @names[$x-1] . "\n";
+print @names[$y-1] . "\n";
+print @names[$z-1];
