@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+$result = &total(2, 3, 5, 7, 8);
+print ("$result");
+sub total {
+	my($sum) = shift @_;
+	foreach (@_) {
+		$sum = $sum + $_;
+		print ("$sum");
+	}
+$sum;
+}
