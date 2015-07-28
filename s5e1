@@ -1,0 +1,11 @@
+#!/usr/bin/env perl -w
+print "Give me a name: ";
+$family_name{"fred"} = "flintstone";
+$family_name{"barney"} = "rubble";
+$family_name{"wilma"} = "flintstone";
+chomp($name = <STDIN>);
+if ($family_name{$name}) {
+	print "$name, their family name is $family_name{$name}";
+} else {
+	print "$name doesn't exist";
+}
