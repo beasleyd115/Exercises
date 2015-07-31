@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+while (<>) {
+	chomp;
+	if (/wilma(.*)fred|fred(.*)wilma/) {
+		print "Found A Match: $_\n";
+	} else {
+		print "No match.\n";
+	}
+}
