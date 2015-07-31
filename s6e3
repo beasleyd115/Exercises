@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+print "Give me some strings: \n";
+@items = <STDIN>;
+print "Give me a number to set up your column: ";
+chomp($column = <STDIN>);
+foreach (@items) {
+	printf "%${column}s", $_;
+}

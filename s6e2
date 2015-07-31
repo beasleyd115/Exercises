@@ -1,0 +1,6 @@
+#!/usr/bin/env perl
+print "Give me some strings\n";
+@items = <STDIN>;
+$format = ("%21s" x @items);
+print (12345678901234567890 . "\n");
+printf $format, @items;
