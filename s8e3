@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+while (<>) {
+	chomp;
+	if (/^\$[a-z]*$/) {
+		print "Found A Match: $_\n";
+	} else {
+		print "No match.\n";
+	}
+}
