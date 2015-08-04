@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+while (<>) {
+	chomp;
+	if (/((fred|wilma)\s+(flintstone))/) {
+		print "Matched: |$`<$&>$'|\n";
+	} else {
+		print "No match.\n";
+	}
+}
