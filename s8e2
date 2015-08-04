@@ -3,9 +3,9 @@ while (<>) {
 	chomp;
 	if (/"([^"]*)"/) {
 		print "Matched Pattern 1: |$`<$&>$'|\n";
-	} else if (/^0?[0-3]?[0-7]{1,2}$/) {
+	} elsif (/^0?[0-3]?[0-7]{1,2}$/) {
 		print "Matched Pattern 2: |$`<$&>$'|\n";
-	} else if(/^\b[\w.]{1,12}\b&/) {
+	} elsif(/^\b[\w.]{1,12}\b&/) {
 		print "Matched Pattern 3: |$`<$&>$'|\n";
 	} else {
 		print "No match.\n";
