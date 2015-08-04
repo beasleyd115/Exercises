@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+while (<>) {
+	chomp;
+	if (/\b(\w+)(\s*\1)+\b/) {
+		print "Found A Match: $_\n";
+	} else {
+		print "No match.\n";
+	}
+}
