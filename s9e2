@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+@ARGV = '/home/ec2-user/perl5/perlbrew/perls/perl-5.16.3/lib/5.16.3/pod/perlfunc.pod';
+while (<>) {
+	if (/^(=item)\s+[a-zA-z_]\w*/) {
+		print "Match Found: $_\n";
+	} else {
+	#	print "No Matches.\n";
+	}
+}
