@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+$what = "fred|barney";
+while (<>) {
+	chomp;
+	if (/($what){3}/) {
+		print "Match Found:  $_\n";
+	} else {
+		print "No Match Found\n";
+	}
+}
