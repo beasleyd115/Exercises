@@ -1,0 +1,33 @@
+#!/usr/bin/env perl
+$numba = int(1 + rand 100);
+print "Pick a number from 1 to 100\n";
+$guess;
+&makeAGuess;
+sub higher () {
+	print "Your guess is to low.\n";
+	&makeAGuess;
+}
+sub lower () {
+	print "Your guess is to high.\n";
+	&makeAGuess;
+}
+sub exit () {
+	print "Goodbye.";
+}
+sub makeAGuess () {
+	$guess = <STDIN>;
+	chomp $guess;
+}
+while ($guess != $numba) {
+	if ($guess > $numba) {
+		&lower;
+	} elsif ($guess < $numba) {
+		&higher;
+	} elsif ($guess == null or $guess = "exit" or $guess == "quit") {
+		&exit;
+	}
+}
+if ($guess == $numba) {
+	print "Correct!\n";
+	&exit;
+}
