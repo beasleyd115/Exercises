@@ -1,0 +1,25 @@
+#!/usr/bin/env perl -w
+use File::Copy;
+$tracker = 0;
+print "Name a source file from this directory.\n";
+$source = <STDIN>;
+chomp $source;
+print "Now name a destination file.\n";
+$destination = <STDIN>;
+chomp $destination;
+print "I need a search pattern.\n";
+$search = <STDIN>;
+chomp $search;
+print "Finally a replacement string would be nice.\n";
+$replacement = <STDIN>;
+chomp $replacement;
+copy("/home/ec2-user/ex/$source", "/home/ec2-user/ex/$destination");
+@ARGV = "/home/ec2-user/ex/$destination";
+while (<>) {
+	if(/($search)/) {
+		my $vari = $1;
+		print "$vari";
+		$vari = $replacement;
+		print "$vari";
+	}
+}
