@@ -18,8 +18,8 @@ copy("/home/ec2-user/ex/$source", "/home/ec2-user/ex/$destination");
 while (<>) {
 	if(/($search)/) {
 		my $vari = $1;
-		print "$vari";
+		print "Old string: $vari";
 		$vari = $replacement;
-		print "$vari";
+		print "New String: $vari";
 	}
 }
