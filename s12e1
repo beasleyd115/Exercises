@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+print "I need a directory name.\n";
+chomp($dir = <STDIN>);
+if ($dir =~ /^\s*$/) {
+	chdir or die "Can't chdir to your home directory: $!";
+} else {
+	chdir $dir or die "Can't chdir to $dir: $!";
+}
+
+@files = <*>;
+foreach (@files) {
+print "$_\n"
+}
