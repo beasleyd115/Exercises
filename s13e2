@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+use File::Basename;
+use File::Spec;
+
+($original, $destination) = @ARGV;
+
+if (-d $destination) {
+	$basename = basename $original;
+$destination = File::Spec->catfile($destination, $basename);
+}
+
+rename $original, $destination or die "Can't link $original to $destination: $!\n";
