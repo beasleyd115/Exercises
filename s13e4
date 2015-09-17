@@ -1,0 +1,18 @@
+#!/usr/bin/env perl
+
+use File::Basename;
+use File::Spec;
+$symlink = $ARGV[0] eq '-s';
+shift @ARGV if $symlink;
+($original, $destination) = @ARGV;
+
+if (-d $destination) {
+	$basename = basename $original;
+$destination = File::Spec->catfile($destination, $basename);
+}
+
+if ($symlink) {
+	symlink $original, $destination or die "Can't soft link $original to $destruction: $!\n";
+} else {
+	link $original, $destination or die "Can't hard link $original to $destination: $!\n";
+}
