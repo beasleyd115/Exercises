@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+
+foreach (<.* *>) {
+	$destination = readlink $_;
+	if (defined $destination) {
+		print "$_ -> $destination\n";
+	}
+}
