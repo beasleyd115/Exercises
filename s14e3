@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+
+if (`date` =~ /^S/ ) {
+	print "Go play!\n";
+} else {
+	print "Get to Work\n";
+}
