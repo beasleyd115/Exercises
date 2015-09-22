@@ -1,0 +1,6 @@
+#!/usr/bin/env perl
+
+open STDOUT, ">ls.out" or die "Can't write to ls.out: $!";
+open STDERR, ">ls.err" or die "Can't write to ls.err: $!;
+chdir "/" or die "Can't change directory to root directory: $!";
+exec "ls", "-l" or die "Can't execute ls: $!";
