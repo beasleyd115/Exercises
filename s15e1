@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+
+@some_numbers = (17, 1000, 04, 1.50, 3.14159, -10, 1.5, 4, 2001, 90210, 666);
+@numbers = sort {$a <=> $b} @some_numbers;
+foreach (@numbers) {
+	print "$_\n";
+}
